@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PozdravlyAI&nbsp;| Оригинальные AI‑поздравления</title>
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Шапка сайта -->
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <h1 class="hero-title">PozdravlyAI</h1>
+        <p class="hero-subtitle">
+          Оригинальные AI‑поздравления на&nbsp;любой вкус и
+          настроение
+        </p>
+        <a href="#services" class="cta-button">Узнать больше</a>
+      </div>
+    </header>
+
+    <!-- Секция услуг -->
+    <main id="services" class="services">
+      <!-- AI‑песня с клипом -->
+      <section id="ai-song" class="service">
+        <div class="service-header">
+          <h2>AI‑песня с&nbsp;клипом</h2>
+          <p>
+            Закажите персональную песню с оригинальной мелодией и видеорядом.
+            Наши алгоритмы создадут уникальный саундтрек специально под ваше
+            событие.
+          </p>
+        </div>
+        <div class="media-box">
+          <img src="assets/hero-background.png" alt="Обложка песни" />
+          <audio controls>
+            <source src="song.wav" type="audio/wav" />
+            Ваш браузер не поддерживает аудио‑элемент.
+          </audio>
+        </div>
+      </section>
+
+      <!-- Ожившие фотографии -->
+      <section id="animated-photos" class="service">
+        <div class="service-header">
+          <h2>Ожившие фотографии</h2>
+          <p>
+            Мы вдохнём жизнь в ваши снимки: лица будут улыбаться, а глаза —
+            искриться. Просто загрузите фотографию и наблюдайте за чудом!
+          </p>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-item">
+            <img src="assets/portrait1.png" alt="Оживший портрет" />
+          </div>
+          <div class="photo-item">
+            <img src="assets/portrait2.png" alt="Оживший портрет" />
+          </div>
+        </div>
+      </section>
+
+      <!-- AI‑юмористическое поздравление -->
+      <section id="humorous" class="service">
+          <div class="service-header">
+            <h2>AI‑юмористическое поздравление</h2>
+            <p>
+              Наш искусственный интеллект умеет шутить! Получайте персональные
+              поздравления с лёгким юмором и теплотой.
+            </p>
+          </div>
+          <div class="humor-box">
+            <p id="humor-text">
+              <!-- Сюда подставится случайное поздравление из JS -->
+            </p>
+            <button id="new-joke" class="cta-button secondary">Ещё шутка</button>
+          </div>
+      </section>
+
+      <!-- Поздравления от известных личностей -->
+      <section id="celebrities" class="service">
+        <div class="service-header">
+          <h2>Поздравления от «известных» личностей</h2>
+          <p>
+            Хотите получить приветствие от мудрого мыслителя или визионера? Мы
+            сгенерируем сообщение от идеального виртуального персонажа!
+          </p>
+        </div>
+        <div class="celeb-grid">
+          <div class="celeb-item">
+            <img src="assets/silhouette.png" alt="Силуэт" />
+            <blockquote>
+              «Поздравляю! Не переставайте удивлять мир своим воображением!»
+            </blockquote>
+            <cite>— Анонимный гений</cite>
+          </div>
+          <div class="celeb-item">
+            <img src="assets/silhouette.png" alt="Силуэт" />
+            <blockquote>
+              «Ваши достижения — это лучшая доказательная база того, что
+              невозможное возможно.»
+            </blockquote>
+            <cite>— Великий мыслитель</cite>
+          </div>
+          <div class="celeb-item">
+            <img src="assets/silhouette.png" alt="Силуэт" />
+            <blockquote>
+              «Продолжайте идти вперёд, потому что будущее — это вы.»
+            </blockquote>
+            <cite>— Визионер</cite>
+          </div>
+        </div>
+      </section>
+
+      <!-- Фильм‑поздравление -->
+      <section id="film" class="service">
+        <div class="service-header">
+          <h2>Фильм‑поздравление</h2>
+          <p>
+            Закажите мини‑фильм, который расскажет историю вашего праздника.
+            Фото, музыка и тёплые слова соберутся в один трогательный ролик.
+          </p>
+        </div>
+        <div class="film-container">
+          <div class="film-slides">
+            <div class="slide active">
+              <img src="assets/hero-background.png" alt="Слайд 1" />
+            </div>
+            <div class="slide">
+              <img src="assets/portrait1.png" alt="Слайд 2" />
+            </div>
+            <div class="slide">
+              <img src="assets/portrait2.png" alt="Слайд 3" />
+            </div>
+          </div>
+          <div class="film-controls">
+            <button id="prev-slide" aria-label="Предыдущий">&#10094;</button>
+            <button id="next-slide" aria-label="Следующий">&#10095;</button>
+          </div>
+          <div class="film-audio">
+            <audio id="film-audio" controls>
+              <source src="song.wav" type="audio/wav" />
+              Ваш браузер не поддерживает аудио‑элемент.
+            </audio>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>&copy; 2025 PozdravlyAI. Все права защищены.</p>
+        <p>
+          Свяжитесь с нами:&nbsp;
+          <a href="mailto:info@pozdravlyai.example">info@pozdravlyai.example</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="script.js"></script>
+  </body>
+</html>

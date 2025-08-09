@@ -1,0 +1,365 @@
+/*
+ * Основной стиль для лендинга PozdravlyAI.
+ * Дизайн подчёркивает креативность и современность сервиса.
+ */
+
+/* CSS Reset и общие переменные */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ff3cac;
+  --secondary-color: #784ba0;
+  --tertiary-color: #2b86c5;
+  --accent-color: #00c9a7;
+  --bg-dark: #0a0f2e;
+  --bg-darker: #0a0c23;
+  --text-light: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+  --surface: #131f43;
+  --surface-alt: #1a2a5c;
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('assets/hero-background.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 15, 46, 0.8), rgba(10, 12, 35, 0.9));
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-light);
+  background: linear-gradient(90deg, var(--primary-color), var(--tertiary-color));
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.cta-button.secondary:hover {
+  background: var(--accent-color);
+  color: var(--bg-dark);
+}
+
+/* Services */
+.services {
+  padding: 4rem 0;
+  background: var(--bg-darker);
+}
+
+.service {
+  margin-bottom: 4rem;
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.service-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-header p {
+  color: var(--text-muted);
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+}
+
+.media-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.media-box img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.media-box audio {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Animated photos */
+.photo-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.photo-item {
+  width: 200px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 4s ease-in-out;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.05) translateY(-10px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Humor section */
+.humor-box {
+  background: var(--surface-alt);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#humor-text {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
+/* Celebrity section */
+.celeb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.celeb-item {
+  background: var(--surface-alt);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.celeb-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+
+.celeb-item blockquote {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+.celeb-item cite {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+}
+
+/* Film section */
+.film-container {
+  position: relative;
+  background: var(--surface-alt);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.film-slides {
+  position: relative;
+  overflow: hidden;
+  height: 260px;
+  border-radius: var(--border-radius);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.film-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.film-controls button {
+  pointer-events: auto;
+  background: rgba(10, 12, 35, 0.6);
+  border: none;
+  color: var(--text-light);
+  font-size: 2rem;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.film-controls button:hover {
+  background: var(--accent-color);
+  color: var(--bg-dark);
+}
+
+.film-audio {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.film-audio audio {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Footer */
+.footer {
+  background: var(--bg-dark);
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-content a {
+  color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .service {
+    padding: 1.5rem;
+  }
+  .film-slides {
+    height: 200px;
+  }
+}
